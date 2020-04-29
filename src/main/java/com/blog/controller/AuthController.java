@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.blog.dto.AuthenticationResponse;
+import com.blog.dto.LoginRequest;
 import com.blog.dto.RegisterRequest;
 import com.blog.service.AuthService;
 
@@ -34,6 +36,11 @@ public class AuthController {
 		
 		return new ResponseEntity<String>("Account Activated Successfully", HttpStatus.OK);
 		
+	}
+	
+	@PostMapping("/login")
+	public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+		return authService.login(loginRequest);
 	}
 
 }
