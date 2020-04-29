@@ -10,7 +10,6 @@ import com.blog.exception.SpringRedditException;
 import com.blog.model.NotificationEmail;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
